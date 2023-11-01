@@ -1,0 +1,53 @@
+<br>
+<br>
+<br>
+<h1>Add/Edit Exercises</h1>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" style="color: black;" id="editer">
+  <p style="color: white;">Add/Edit Exercise Below</p>
+  <label for="bodypart" style="color: white"></label>
+  <select
+  name="bodypart"
+   id="bodypart"
+   [ngModel]="selectedBodyPart"
+   class="form-control">
+   <option
+   *ngFor="let bp of bodyparts"
+   [value]="bp" >{{bp}}</option>
+  </select>
+
+  <input
+  type="text"
+  id="name"
+  placeholder="exercise name"
+  class="form-control"
+  name="name"
+  ngModel
+  required/>
+
+  <input
+  type="text"
+  id="description"
+  placeholder="exercise description"
+  class="form-control"
+  name="description"
+  ngModel
+  required
+  />
+
+  <input
+  type="text"
+  id="imagePath"
+  placeholder="image link url"
+  class="form-control"
+  name="imagePath"
+  ngModel
+  />
+
+  <button class="btn btn-success"
+  type="submit"
+  [disabled]="!f.valid">
+  {{editMode ? 'Update' : 'Submit'}}</button>
+  <button class="btn btn-danger" type="button" (click)="onDelete();"
+  *ngIf="editMode">Delete</button>
+  <button class="btn btn-primary" type="button" (click)="onClear();">Clear</button>
+</form>

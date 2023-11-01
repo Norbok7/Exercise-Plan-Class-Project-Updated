@@ -1,0 +1,33 @@
+<br>
+<br>
+<br>
+
+
+
+
+    <div class="col-xs-12" style="background-color: rgb(219, 211, 211);">
+
+
+      <div>
+        <!-- *ngIf="myTallys.length > 0" -->
+        <ul>
+          <!-- name="listNg" *ngFor="let tally of myTallys; let i = index" -->
+          <li>
+
+            <p style="color: blue; font-size: larger;">Beginner Workouts Completed:{{myTallys[0]}}
+
+            <p style="color: rgb(73, 64, 64); font-size: larger;">Intermediate Workouts Completed:{{myTallys[1]}}</p>
+
+            <p style="color: black; font-size: larger;">Advanced Workouts Completed:{{myTallys[2]}}</p>
+
+            <p style="color: rgb(13, 207, 13); font-size: larger;">Total Workouts Completed: {{myTallys[3]}}</p>
+
+            <br />
+            <br />
+
+          </li>
+        </ul>
+        <button class="button" style="width: 100%; background-color:#000000df; height: 65px" [routerLink]="['/exercise-difficulty']">CONTINUE YOUR JOURNEY HERE!</button>
+      </div>
+    </div>
+

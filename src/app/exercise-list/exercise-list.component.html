@@ -1,0 +1,43 @@
+<br />
+<br />
+<br />
+
+<app-exercise-list-edit></app-exercise-list-edit>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div *ngIf="myExercises.length > 0">
+        <ul appClick>
+          <li name="listNg" *ngFor="let exercise of myExercises | sortExercises: 'bodypart'; let i = index">
+            <div style="font-size: large;"><strong>{{ exercise.name }}</strong></div><br />
+            <div><em>{{ exercise.description }}</em></div><br />
+            <img src="{{ exercise.imagePath }}" style="max-height: 150px; max-width: 150px;" />
+
+            <button
+            class="btn btn-primary btn-md delete"
+            [routerLink]="['/exercise-list/edit']"
+            (click)="runServiceEdit(i)">Edit Ex.</button>
+
+
+            <br>
+            <br>
+            <br>
+            <app-search-bar (search)="onSearch($event)"></app-search-bar>
+
+            <ul>
+              <li *ngFor="let exercise of filteredExercises">
+                {{ exercise.name }}
+              </li>
+            </ul>
+
+          </li>
+        </ul>
+        <button class="button"
+        style="width: 100%; height: 65px;color: black;"
+        [routerLink]="['/exercise-difficulty']">CONTINUE YOUR JOURNEY HERE!</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,331 @@
+<br />
+<br />
+<br />
+<h4 style="text-align: center;">
+  Choose a option based on your personal experience, and log it on the side!
+</h4>
+<br />
+<br />
+<div class="container" id="difficulty" style="align-content: space-around;">
+  <div class="row">
+    <div class="col-xs-8" style="align-items: center;">
+<button
+[routerLink]="['/exercise-difficulty/beginner']"
+  (click)="beginner()"
+  style="background-color: blue; margin-left: 5px; "
+
+>
+  Beginner
+</button>
+
+
+
+<button
+[routerLink]="['/exercise-difficulty/intermediate']"
+  (click)="intermediate()"
+  style="background-color: #4c5c64df; margin-left: 5px"
+>
+  Intermediate
+</button>
+
+
+
+<button
+[routerLink]="['/exercise-difficulty/advanced']"
+  (click)="advanced()"
+  style="background-color: black; margin-left: 5px"
+>
+  Advanced
+</button>
+</div></div></div>
+<div class="container" id="beginner" style="display: none">
+  <div class="row">
+    <div class="col-xs-8">
+
+      <h2>Beginner</h2>
+      <br>
+      <br>
+      <button
+        [routerLink]="['/exercise-difficulty/beginner-upper-body']"
+        style="margin: 1%; background-color: blue"
+        (click)="upper()"
+      >
+        UpperBody Workout
+      </button>
+      <button
+        [routerLink]="['/exercise-difficulty/beginner-lower-body']"
+        style="margin: 1%; background-color: blue"
+        (click)="lower()"
+      >
+        LowerBody Workout
+      </button>
+      <button
+        [routerLink]="['/exercise-difficulty/beginner-core-body']"
+        style="margin: 1%; background-color: blue"
+        (click)="core()"
+      >
+        CoreBody Workout
+      </button>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li name="listNg" *ngFor="let exercise of coreExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+
+          <h3>BEGINNER CoreBody</h3>
+          <p>For a beginner Core body workout you should keep your sets and repetitions low, and stick to machines as best you can!</p>
+          <input type="text"
+          placeholder="...your sets 2-3"/>
+          <input type="text"
+          placeholder="...your repetitions 10-12">
+
+          <br />
+        </li>
+      </ul>
+      <ul>
+        <li name="listNg" *ngFor="let exercise of upperExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+          <h3>BEGINNER UpperBody</h3>
+          <p>For a beginner upperbody workout you should keep your sets and repetitions low, and stick to machines as best you can!</p>
+          <input type="text"
+          placeholder="...your sets 2-3"/>
+          <input type="text"
+          placeholder="...your repetitions 10-12">
+          <br />
+        </li>
+      </ul>
+
+      <ul>
+        <li name="listNg" *ngFor="let exercise of lowerExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+          <h3>BEGINNER LowerBody</h3>
+          <p>For a beginner lower body workout you should keep your sets and repetitions low, and stick to machines as best you can!</p>
+          <input type="text"
+          placeholder="...your sets 2-3"/>
+          <input type="text"
+          placeholder="...your repetitions 10-12">
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+<div class="container" id="intermediate" style="display: none">
+  <div class="row">
+    <div class="col-xs-8">
+      <br>
+      <h2>Intermediate</h2>
+      <br>
+      <button
+        [routerLink]="['/exercise-difficulty/intermediate-upper-body']"
+        style="margin: 1%; background-color: #4c5c64df"
+        (click)="upper()"
+      >
+        UpperBody Workout
+      </button>
+
+      <button
+        [routerLink]="['/exercise-difficulty/intermediate-lower-body']"
+        style="margin: 1%; background-color: #4c5c64df"
+        (click)="lower()"
+      >
+        LowerBody Workout
+      </button>
+      <button
+        [routerLink]="['/exercise-difficulty/intermediate-core-body']"
+        style="margin: 1%; background-color: #4c5c64df"
+        (click)="core()"
+      >
+        CoreBody Workout
+      </button>
+      <br>
+      <br>
+      <br>
+      <ul>
+        <li name="listNg" *ngFor="let exercise of coreExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+          <h3>Intermediate Core Body</h3>
+          <p>For a intermediate core body workout you should keep your sets and repetitions moderate amounts, start trying some free weight exercises!</p>
+          <input type="text"
+          placeholder="...your sets 3-4"/>
+          <input type="text"
+          placeholder="...your repetitions 8-15">
+          <br />
+        </li>
+      </ul>
+      <ul>
+        <li name="listNg" *ngFor="let exercise of upperExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+          <h3>Intermediate UpperBody</h3>
+          <p>For a intermediate upper body workout you should keep your sets and repetitions moderate amounts, start trying some free weight exercises!</p>
+          <input type="text"
+          placeholder="...your sets 3-4"/>
+          <input type="text"
+          placeholder="...your repetitions 8-15">
+          <br />
+        </li>
+      </ul>
+
+      <ul>
+        <li name="listNg" *ngFor="let exercise of lowerExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+          <h3>Intermediate LowerBody</h3>
+          <p>For a intermediate lower body workout you should keep your sets and repetitions moderate amounts, start trying some free weight exercises!</p>
+          <input type="text"
+          placeholder="...your sets 3-4"/>
+          <input type="text"
+          placeholder="...your repetitions 8-15">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="advanced" style="display: none">
+  <div class="row">
+    <div class="col-xs-8">
+      <br>
+      <h2>Advanced</h2>
+      <br>
+      <button
+        [routerLink]="['/exercise-difficulty/advanced-upper-body']"
+        style="margin: 1%; background-color: black"
+        (click)="upper()"
+      >
+        UpperBody Workout
+      </button>
+      <button
+        [routerLink]="['/exercise-difficulty/advanced-lower-body']"
+        style="margin: 1%; background-color: black"
+        (click)="lower()"
+      >
+        LowerBody Workout
+      </button>
+
+      <button
+        [routerLink]="['/exercise-difficulty/advanced-core-body']"
+        style="margin: 1%; background-color: black"
+        (click)="core()"
+      >
+
+        CoreBody Workout
+      </button>
+      <br>
+      <br>
+      <br>
+
+
+      <ul>
+        <li name="listNg" *ngFor="let exercise of coreExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+          <h3>Advanced Core Body</h3>
+          <p>For a advanced core body workout you should try implementing high, and low range repition workouts.  You should be primarily on free weight exercises, and attempting drop sets, supersets, and negative repititions!</p>
+          <input type="text"
+          placeholder="...your sets 4-5"/>
+          <input type="text"
+          placeholder="...your repetitions 6-15">
+          <br />
+        </li>
+      </ul>
+      <ul>
+        <li name="listNg" *ngFor="let exercise of upperExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+          <h3>Advanced UpperBody</h3>
+          <p>For a advanced upper body workout you should try implementing high, and low range repition workouts.  You should be primarily on free weight exercises, and attempting drop sets, supersets, and negative repititions!</p>
+          <input type="text"
+          placeholder="...your sets 4-5"/>
+          <input type="text"
+          placeholder="...your repetitions 6-15">
+          <br />
+        </li>
+      </ul>
+
+      <ul>
+        <li name="listNg" *ngFor="let exercise of lowerExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+          <h3>Advanced LowerBody</h3>
+          <p>For a advanced lower body workout you should try implementing high, and low range repition workouts.  You should be primarily on free weight exercises, and attempting drop sets, supersets, and negative repititions!</p>
+          <input type="text"
+          placeholder="...your sets 4-5"/>
+          <input type="text"
+          placeholder="...your repetitions 6-15">
+          <br />
+        </li>
+      </ul>
+      <br />
+    </div>
+  </div>
+</div>
