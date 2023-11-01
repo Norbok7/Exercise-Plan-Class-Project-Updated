@@ -1,10 +1,9 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { Exercise } from 'src/main';
 import { TallysService } from './tallys/tally.service';
-import { Tallys } from '../Shared/tallysmodel';
-import { ExerciseListEditComponent } from '../exercise-list/exercise-list-edit/exercise-list-edit.component';
 import { DifficultyLevelComponent } from '../difficulty-level/difficulty-level.component';
 import { DataStorageService } from '../Shared/data-storage.service';
+import { LogInInformationComponent } from './log-in-information/log-in-information.component';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -21,7 +20,7 @@ export class SidebarComponent{
  zz=0;
 
 
-constructor(private tallysService: TallysService, private difficulty: DifficultyLevelComponent, private dataStorageService: DataStorageService) {
+constructor(private tallysService: TallysService, private difficulty: DifficultyLevelComponent, private dataStorageService: DataStorageService, private login: LogInInformationComponent) {
 
 }
 ngOnInit() {
@@ -34,6 +33,9 @@ ngOnInit() {
       document.getElementById('wrapper').style.display = 'block';
     }
   });
+}
+showForm(){
+  this.login.showFormNow();
 }
 onSaveData(){
 this.dataStorageService.storeExercises();

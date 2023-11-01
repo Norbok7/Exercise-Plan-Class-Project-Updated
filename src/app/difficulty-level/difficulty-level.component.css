@@ -21,6 +21,7 @@ body{
 }
 h2{text-align: center;}
 button{
+  margin-bottom: 55px;
   padding: 25px 30px;
   background-color: #4c5c64df;
   color: #03e9f4;

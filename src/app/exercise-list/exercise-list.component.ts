@@ -36,7 +36,7 @@ import { NgForm, NgModel } from '@angular/forms';
       //   console.log(exercise)
       // }
       runServiceEdit(index: number){
-        
+
         this.exerciseService.startedEditing.next(index);
 
       }

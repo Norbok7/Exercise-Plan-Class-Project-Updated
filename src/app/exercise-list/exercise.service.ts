@@ -12,7 +12,6 @@ export class ExerciseService implements OnInit {
   startedEditing = new Subject<number>();
   exerciseSelected = new Subject<Exercise>();
   exerciseListChange = new Subject<Exercise[]>();
-  exerciseData: any[];
   public myExercises: Exercise[] = []
   //   new Exercise(
   //     BodyPart.core,
@@ -89,17 +88,17 @@ export class ExerciseService implements OnInit {
   // ];
 
 
-  constructor(private data: DataStorageService) {}
+  constructor() {}
   // figure how to solve this question to refactor 3 components out
   //calls core,lower,upper exercises from exercise service onto our difficulty level component button
 
 
 
   ngOnInit(): any {
-  this.data.fetchExercises()
+
   }
-  setExercises(_myExercises: Exercise[]){
-    this.myExercises = this.myExercises;
+  setExercises(myExercises: Exercise[]){
+    this.myExercises = myExercises;
     this.exerciseListChange.next(this.myExercises.slice());
   }
   //read

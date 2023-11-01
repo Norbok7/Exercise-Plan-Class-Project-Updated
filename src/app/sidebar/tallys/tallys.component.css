@@ -1,5 +1,7 @@
 
 button{
+  margin-top:  10px;
+  margin-bottom: 10px;
   padding: 0px 0px;
   background-color: #1d9e21df;
   color: #03e9f4;
@@ -10,6 +12,7 @@ button{
   overflow: hidden;
   transition: 0.5s;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 button:hover{
@@ -21,3 +24,5 @@ button:hover{
                 0 0 200px #03e9f4;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
+
+.col-xs-12 {margin-bottom: 55px;}

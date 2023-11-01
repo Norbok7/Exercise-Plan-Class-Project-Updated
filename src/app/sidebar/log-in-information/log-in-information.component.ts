@@ -1,6 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, Injectable, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-log-in-information',
   templateUrl: './log-in-information.component.html',
@@ -12,5 +14,8 @@ selectedSubscription = 'Advanced'
 @ViewChild ('signupForm') sgnForm: NgForm;
 onSubmit(){
 console.log(this.sgnForm.value);
+}
+showFormNow(){
+  document.getElementById('thisForm').style.display= 'block';
 }
 }

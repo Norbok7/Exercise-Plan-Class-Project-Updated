@@ -1,23 +1,29 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Tallys } from 'src/app/Shared/tallysmodel';
+import { OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: "root"
 })
 
-export class TallysService {
+export class TallysService implements OnInit {
   public x: any = 0;
   public y: any = 0;
   public z: any = 0;
   public zz: any = 0;
   private myTally: Tallys [] = [
+
+
 this.x,this.y,this.z,this.zz
   ]
   tallySelected = new EventEmitter<Tallys>();
   tallysListChange = new EventEmitter<Tallys[]>();
 
-
+progressValue = 0;
+ngOnInit(): void {
+    this.progressValue = this.zz;
+}
 
 // workoutsTally: number[] = [this.x,this.y,this.z,this.zz];
 // getX():Observable<number>{

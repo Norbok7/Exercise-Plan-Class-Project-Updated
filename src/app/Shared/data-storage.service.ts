@@ -21,8 +21,7 @@ fetchExercises(){
   this.http.get<Exercise[]>(
     'https://exercise-project-49ee5-default-rtdb.firebaseio.com/exercises.json')
   .subscribe(myExercises => {
-    console.log(myExercises);
-    // this.exerciseService.setExercises(myExercises);
+    this.exerciseService.setExercises(myExercises);
   })
 }
 }

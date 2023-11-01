@@ -18,6 +18,7 @@ body{
 }
 
 button{
+  margin-bottom: 55px;
   padding: 25px 30px;
   background-color: #8d989edf;
   color: #03e9f4;

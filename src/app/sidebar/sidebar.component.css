@@ -40,7 +40,8 @@ body {
 }
 
 #sidebar-wrapper {
-  width: 250px;
+  width: 350px;
+
 
 }
 
@@ -72,11 +73,11 @@ h1,h2,h3,h4,h5,h6 {
 p{text-align: center;}
   button{
     padding: 0px 0px;
-    background-color: #000000df;
+    background-color: blue;
     color: #03e9f4;
     font-weight: bold;
     border: none;
-    border-radius: 0px;
+    border-radius: 5px;
     letter-spacing: 2px;
     overflow: hidden;
     transition: 0.5s;
