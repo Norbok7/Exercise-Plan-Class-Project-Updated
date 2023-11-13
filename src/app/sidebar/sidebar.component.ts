@@ -3,14 +3,13 @@ import { Exercise } from 'src/main';
 import { TallysService } from './tallys/tally.service';
 import { DifficultyLevelComponent } from '../difficulty-level/difficulty-level.component';
 import { DataStorageService } from '../Shared/data-storage.service';
-import { LogInInformationComponent } from './log-in-information/log-in-information.component';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
 
-export class SidebarComponent{
+export class SidebarComponent implements OnInit{
   @Input() exercise: Exercise;
   myExercises: Exercise[] = [];
   myTallys: TallysService
@@ -20,7 +19,7 @@ export class SidebarComponent{
  zz=0;
 
 
-constructor(private tallysService: TallysService, private difficulty: DifficultyLevelComponent, private dataStorageService: DataStorageService, private login: LogInInformationComponent) {
+constructor(private tallysService: TallysService, private difficulty: DifficultyLevelComponent, private dataStorageService: DataStorageService) {
 
 }
 ngOnInit() {
@@ -34,9 +33,9 @@ ngOnInit() {
     }
   });
 }
-showForm(){
-  this.login.showFormNow();
-}
+// showForm(){
+//   this.login.showFormNow();
+// }
 onSaveData(){
 this.dataStorageService.storeExercises();
 }

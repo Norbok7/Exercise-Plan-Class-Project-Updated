@@ -1,7 +1,6 @@
 import { Injectable, Component, OnInit, EventEmitter } from '@angular/core';
 import { TallysService } from './tally.service';
 import { Tallys } from 'src/app/Shared/tallysmodel';
-
 @Injectable({
   providedIn: "root"
 })

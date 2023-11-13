@@ -3,8 +3,7 @@ import { BodyPart, Exercise } from '../Shared/exercisemodel';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { ExerciseListEditComponent } from './exercise-list-edit/exercise-list-edit.component';
-import { DataStorageService } from '../Shared/data-storage.service';
-
+import { DataStorageService } from 'src/app/Shared/data-storage.service';
 @Injectable({
   providedIn: 'root',
 })

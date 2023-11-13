@@ -3,7 +3,7 @@ import { OnInit, Input } from '@angular/core';
 import { BodyPart, Exercise } from '../Shared/exercisemodel';
 import { ExerciseService } from './exercise.service';
 import { NgForm, NgModel } from '@angular/forms';
-
+import { DataStorageService } from 'src/app/Shared/data-storage.service';
 
 @Component({
   selector: 'app-exercise-list',
@@ -16,25 +16,22 @@ import { NgForm, NgModel } from '@angular/forms';
     myExercises: Exercise[] = [];
     searchTerm: string;
     filteredExercises: Exercise[];
-    constructor(private exerciseService: ExerciseService) {}
+    constructor(private exerciseService: ExerciseService, private data: DataStorageService) {}
 
       ngOnInit(): void {
+        // this.data.fetchExercises(); //populate this on landing page
         //use the service to set local 'myexercises' array to service/global 'myExercise' array
       this.myExercises = this.exerciseService.getExercises();
       //list for change on the global 'myExercises' array and update the local version
       this.exerciseService.exerciseListChange.subscribe((exercises: Exercise[]) => {
         this.myExercises = exercises;
-
       })
 
       }
       getSets(value: number) {
         return value;
       }
-      // runServiceDelete(exercise){
-      //   this.exerciseService.deleteItem(exercise)
-      //   console.log(exercise)
-      // }
+
       runServiceEdit(index: number){
 
         this.exerciseService.startedEditing.next(index);
@@ -48,12 +45,12 @@ import { NgForm, NgModel } from '@angular/forms';
         return console.log(value);
 
     }
-    onSearch(searchTerm: string) {
-      this.searchTerm = searchTerm;
-      this.filteredExercises = this.exerciseService.getExercises().filter(exercise =>
-        exercise.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
+    // onSearch(searchTerm: string) {
+    //   this.searchTerm = searchTerm;
+    //   this.filteredExercises = this.exerciseService.getExercises().filter(exercise =>
+    //     exercise.name.toLowerCase().includes(searchTerm.toLowerCase())
+    //   );
+    // }
 
   }
 

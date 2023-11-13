@@ -1,5 +1,5 @@
 body {
-  padding-top:50px;;
+  padding-top:50px;
 }
 /* #sidebar-wrapper { position: -webkit-sticky; position: sticky; top: 0; } */
 #wrapper {
@@ -54,7 +54,7 @@ h1,h2,h3,h4,h5,h6 {
   }
   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
   .container{text-align: center;}
-  h2{padding: 10px};
+  h2{padding: 10px}
 
   *{
       margin: 0;
@@ -72,6 +72,7 @@ h1,h2,h3,h4,h5,h6 {
   }
 p{text-align: center;}
   button{
+
     padding: 0px 0px;
     background-color: blue;
     color: #03e9f4;

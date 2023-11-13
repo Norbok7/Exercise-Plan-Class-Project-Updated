@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from "@angular/router";
 import { ExerciseService } from "../exercise-list/exercise.service";
 import { BodyPart, Exercise } from "../Shared/exercisemodel";
 import { ExerciseListComponent } from "../exercise-list/exercise-list.component";
+
 @Component({
   selector: 'app-difficulty-level',
   templateUrl: './difficulty-level.component.html',

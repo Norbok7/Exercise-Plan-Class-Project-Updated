@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-.container{text-align: center;}
-h2{padding: 10px};
+.container{text-align: center}
+h2{padding: 10px}
 
 *{
     margin: 0;
@@ -18,7 +18,7 @@ body{
 }
 
 button{
-  margin-bottom: 55px;
+  margin-bottom: 25px;
   padding: 25px 30px;
   background-color: #8d989edf;
   color: #03e9f4;
@@ -40,6 +40,5 @@ button:hover{
                 0 0 200px #03e9f4;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
-
 #e{font-size: 24px;}
 .delete {background-color: rgb(34, 0, 255);color: white; position:relative; font-size: 7px;letter-spacing: 1px; max-width: 10%; padding: 5px 5px;}
