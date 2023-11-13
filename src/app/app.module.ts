@@ -4,17 +4,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { Routes, RouterModule } from '@angular/router';
-import { ExerciseListComponent } from './exercise-list/exercise-list.component';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
 import { TallysComponent } from './sidebar/tallys/tallys.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { ExerciseListEditComponent } from './exercise-list/exercise-list-edit/exercise-list-edit.component';
 import { SortExercisesPipe } from './Shared/pipes/sort-exercises.pipe';
 import { DropdownDirective } from './Shared/dropdown.directive';
+import { ExerciseListEditComponent } from './exercise-list/exercise-list-edit/exercise-list-edit.component';
+import { ExerciseListComponent } from './exercise-list/exercise-list.component';
+import { AuthComponent } from './Auth/auth.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +26,7 @@ import { DropdownDirective } from './Shared/dropdown.directive';
     ExerciseListEditComponent,
     SortExercisesPipe,
     DropdownDirective,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

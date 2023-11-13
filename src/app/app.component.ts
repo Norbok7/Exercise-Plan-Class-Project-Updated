@@ -1,19 +1,16 @@
-
-import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './Auth/auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
+export class AppComponent implements OnInit {
+  // * Constructor
+  constructor(private authService: AuthService) {}
 
-export class AppComponent implements OnInit  {
-[x: string]: any;
-
-constructor(private router: Router){}
-ngOnInit(){
-  this.router.navigate([''])
-}
+  // * Lifecycle
+  ngOnInit(): void {
+    this.authService.autoSignInFromLocalStorage();
   }
-
+}
