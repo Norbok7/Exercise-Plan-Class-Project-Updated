@@ -6,16 +6,13 @@ import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.co
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ExerciseListEditComponent } from './exercise-list/exercise-list-edit/exercise-list-edit.component';
 import { authGuard } from './Auth/auth.guard';
+import { AuthComponent } from './Auth/auth.component';
 
 const routes: Routes = [
   // { path: 'log-in', component: LogInInformationComponent },
   { path: '', component: LandingPageComponent },
   { path: 'workouts-completed', component: TallysComponent},
-  {
-    path: 'auth',
-    canActivate: [authGuard],
-    loadChildren: () => import('./Auth/auth.module').then((m) => m.AuthModule),
-  },
+  { path: 'auth', component: AuthComponent, canActivate: [authGuard] },
   { path: 'exercise-list', component: ExerciseListComponent,
    children: [{path: ':exercise', component: ExerciseListComponent},
    {path: ':edit', component: ExerciseListEditComponent},

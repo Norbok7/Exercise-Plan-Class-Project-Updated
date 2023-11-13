@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
+  styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent {
   // * Properties
@@ -44,7 +45,7 @@ export class AuthComponent {
       next: (data) => {
         console.log(data);
 
-        this.router.navigate(['exercise-list']);
+        this.router.navigate(['exercise-difficulty']);
       },
       error: (res: HttpErrorResponse) => {
         console.log(res);

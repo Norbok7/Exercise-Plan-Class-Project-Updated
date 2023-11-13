@@ -13,6 +13,10 @@ import { SortExercisesPipe } from './Shared/pipes/sort-exercises.pipe';
 import { DropdownDirective } from './Shared/dropdown.directive';
 import { ExerciseListEditComponent } from './exercise-list/exercise-list-edit/exercise-list-edit.component';
 import { ExerciseListComponent } from './exercise-list/exercise-list.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthComponent } from './Auth/auth.component';
+import { AuthInterceptorService } from './Auth/auth-intercepter.service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { ExerciseListComponent } from './exercise-list/exercise-list.component';
     ExerciseListEditComponent,
     SortExercisesPipe,
     DropdownDirective,
-    
+    AuthComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,14 @@ import { ExerciseListComponent } from './exercise-list/exercise-list.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [ExerciseListComponent, DifficultyLevelComponent],
-  bootstrap: [AppComponent]
+
+  providers: [ExerciseListComponent, DifficultyLevelComponent,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
