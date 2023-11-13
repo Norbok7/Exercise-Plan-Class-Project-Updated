@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AuthComponent } from './auth.component';
+
 import { RouterModule } from '@angular/router';
 import { authGuard } from './auth.guard';
 
@@ -10,6 +11,9 @@ import { authGuard } from './auth.guard';
     // Directives
     // Pipes
   ],
-
+  imports: [
+   
+    RouterModule.forChild([{ path: '', component: AuthComponent }]),
+  ],
 })
 export class AuthModule {}
