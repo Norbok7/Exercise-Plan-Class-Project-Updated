@@ -21,6 +21,7 @@ export class AuthComponent {
 
   // * Methods
   onAuthSubmit(form: NgForm) {
+
     // Descructure
     const { email, password } = form.value;
 

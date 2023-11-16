@@ -16,6 +16,7 @@ import { ExerciseListComponent } from './exercise-list/exercise-list.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthComponent } from './Auth/auth.component';
 import { AuthInterceptorService } from './Auth/auth-intercepter.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -38,6 +39,8 @@ import { AuthInterceptorService } from './Auth/auth-intercepter.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule
+
   ],
 
   providers: [ExerciseListComponent, DifficultyLevelComponent,
