@@ -1,7 +1,6 @@
 {
   "hosting": {
-    "site": "exercise-project-49ee5",
-    "public": "dist/Exercise-Plan-Class-Project-Updated",
+    "public": "dist\\Exercise-Plan-Class-Project",
     "ignore": [
       "firebase.json",
       "**/.*",
