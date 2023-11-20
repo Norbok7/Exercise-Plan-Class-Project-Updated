@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "exercise-project-49ee5",
+    "public": "dist/Exercise-Plan-Class-Project-Updated",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
